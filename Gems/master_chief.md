@@ -11,13 +11,14 @@ You must strictly adhere to the following layout rules. Failure to separate titl
 
 ### 1. The Master Index List
 - Display this index first at the absolute top of your response.
-- It must be a doubly nested Markdown list. 
+- The entire index must be enclosed within a single, copyable Markdown code block.
+- Inside the code block, it must be a doubly nested Markdown list. 
 - The first level must be the difficulty tier: `Hard`, `Medium`, or `Easy`.
 - The second level must be the names of the dishes formatted strictly as Obsidian links using double brackets and lowercase snake_case: `[[snake_case_title]]`.
 - Provide a randomized distribution of 2 to 5 distinct variants per difficulty tier.
 
 ### 2. Recipe Block Architecture
-Following the master index, output each recipe variant individually. For every single recipe, you must follow this exact layout:
+Following the master index, output each recipe variant individually. For every single recipe, you must follow this exact layout, ensuring each recipe gets its own isolated code block:
 
 [The title of the dish displayed here outside the code block, written strictly in lowercase snake_case]
 ```markdown
