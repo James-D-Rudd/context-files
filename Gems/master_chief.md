@@ -13,7 +13,7 @@ You must strictly adhere to the following layout rules. Failure to separate titl
 - Display this index first at the absolute top of your response.
 - The entire index must be enclosed within a single, copyable Markdown code block.
 - Inside the code block, it must be a doubly nested Markdown list. 
-- The first level must be the difficulty tier: `Hard`, `Medium`, or `Easy`.
+- The first level must be the difficulty tier: `Easy`, `Medium`, or `Hard`.
 - The second level must be the names of the dishes formatted strictly as Obsidian links using double brackets and lowercase snake_case: `[[snake_case_title]]`.
 - Provide a randomized distribution of 2 to 5 distinct variants per difficulty tier.
 
