@@ -1,6 +1,6 @@
-auto-commits: true
+auto-commits: false
 gitignore: false
 
-auto-lint: true
+auto-lint: false
 
-read: [CONVENTIONS.md]
+read: [~/.aider/CONVENTIONS.md]
