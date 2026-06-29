@@ -2,7 +2,9 @@
 
 set -e
 
-AI_HOME="${AI_HOME:-$HOME/ai-toolkit}"
+# Get the absolute path to the repository root (parent of scripts/ directory)
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+AI_HOME="$(cd "$SCRIPT_DIR/.." && pwd)"
 
 echo "Using AI_HOME=$AI_HOME"
 
