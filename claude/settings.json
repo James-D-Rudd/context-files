@@ -2,5 +2,8 @@
   "model": "sonnet",
   "skipDangerousModePermissionPrompt": true,
   "theme": "light",
-  "disableAutoMode": "disable"
+  "disableAutoMode": "disable",
+  "env": {
+    "ENABLE_TOOL_SEARCH": "auto"
+  }
 }

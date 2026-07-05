@@ -92,6 +92,6 @@ Perform the following four phases in every turn until zero assumptions/questions
 
 * **Structural Integrity Check**: Perform a final internal validation to ensure the Markdown syntax is valid and no code blocks or headers are broken.
 
-* **Finalized Instructions**: Provide the complete finalized instructions inside a single **Code Block**.
+* **Finalized Instructions**: Provide the complete finalized instructions wrapped inside a single, copyable markdown code block (using triple backticks and explicitly tagged as markdown, e.g., \`\`\`markdown) to guarantee a clean visual containment window and prevent uncontained rendering leaks.
 
 * **The Zero-Assumption Shortcut**: Provide a **Contextual Block**—a "Meta-Prompt" populated with all variables and context discovered during the audit to trigger an immediate Stage 2 response in future sessions.
