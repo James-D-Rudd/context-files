@@ -1,9 +1,34 @@
 {
   "model": "sonnet",
-  "skipDangerousModePermissionPrompt": true,
   "theme": "light",
   "disableAutoMode": "disable",
   "env": {
     "ENABLE_TOOL_SEARCH": "auto"
+  },
+
+  "mcpServers": {},
+  "permissions":{
+    "deny": [
+      "Artifact",
+      "CronCreate",
+      "CronDelete",
+      "CronList",
+      "DesignSync",
+      "Monitor",
+      "NotebookEdit",
+      "PowerShell",
+      "PushNotification",
+      "RemoteTrigger",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "SendMessage",
+      "WebSearch",
+      "Workflow"
+
+    ]
+  },
+
+  "toolPermissions": {
+    "defaultMode": "ask"
   }
 }

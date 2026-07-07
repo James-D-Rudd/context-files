@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+
+set -e
+
+PROMPT_NAME="$1"
+CONTEXT_DIR="$HOME/.claude/prompts/$PROMPT_NAME"
+SETTINGS_FILE=".claude/settings.local.json"
+
+cleanup() {
+    rm -f "$SETTINGS_FILE"
+}
+
+trap cleanup EXIT INT TERM
+
+if [[ -z "$PROMPT_NAME" ]]; then
+    echo "Usage: start_claude <prompt-name>"
+    exit 1
+fi
+
+if [[ ! -d "$CONTEXT_DIR" ]]; then
+    echo "Prompt not found: $CONTEXT_DIR"
+    exit 1
+fi
+
+if [[ ! -f "$CONTEXT_DIR/settings.json" ]]; then
+    echo "Missing settings.json: $CONTEXT_DIR"
+    exit 1
+fi
+
+if [[ ! -f "$CONTEXT_DIR/PROMPT.md" ]]; then
+    echo "Missing PROMPT.md: $CONTEXT_DIR"
+    exit 1
+fi
+
+cp "$CONTEXT_DIR/settings.json" "$SETTINGS_FILE"
+
+xclip -selection clipboard < "$CONTEXT_DIR/PROMPT.md"
+
+echo "Loaded Claude profile: $PROMPT_NAME"
+echo "Prompt copied to clipboard."
+
+claude
