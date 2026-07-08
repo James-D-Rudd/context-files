@@ -1,0 +1,41 @@
+{
+	"permissions": {
+		"Allow": [
+				"Bash(ls|find|grep|cat)"
+		],
+
+		"deny": [
+			"Agent",
+			"Artifact",
+			"AskUserQuestion",
+			"CronCreate",
+			"CronDelete",
+			"CronList",
+			"DesignSync",
+			"Edit",
+			"EnterPlanMode",
+			"EnterWorktree",
+			"ExitPlanMode",
+			"ExitWorktree",
+			"LSP",
+			"Monitor",
+			"NotebookEdit",
+			"PowerShell",
+			"PushNotification",
+			"RemoteTrigger",
+			"ReportFindings",
+			"ScheduleWakeup",
+			"SendMessage",
+			"Skill",
+			"Task",
+			"TaskCreate",
+			"TaskGet",
+			"TaskList",
+			"TaskOutput",
+			"TaskStop",
+			"TaskUpdate",
+			"Workflow",
+			"Write"
+		]
+	}
+}
