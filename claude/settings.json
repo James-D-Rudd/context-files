@@ -1,0 +1,6 @@
+{
+  "model": "sonnet",
+  "skipDangerousModePermissionPrompt": true,
+  "theme": "light",
+  "disableAutoMode": "disable"
+}
