@@ -9,19 +9,29 @@
   "mcpServers": {},
   "permissions":{
     "deny": [
+			"Agent",
       "Artifact",
       "CronCreate",
       "CronDelete",
       "CronList",
       "DesignSync",
+			"ListMcpResourcesTool",
       "Monitor",
       "NotebookEdit",
       "PowerShell",
       "PushNotification",
+			"ReadMcpResourceTool",
       "RemoteTrigger",
       "ReportFindings",
       "ScheduleWakeup",
       "SendMessage",
+			"Task",
+			"TaskCreate",
+			"TaskGet",
+			"TaskList",
+			"TaskOutput",
+			"TaskStop",
+			"TaskUpdate",
       "WebSearch",
       "Workflow"
 
@@ -30,5 +40,20 @@
 
   "toolPermissions": {
     "defaultMode": "ask"
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "_gstack_source": "plan-tune-cathedral",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/me/job/business/automation/repos/context-files/gstack/hosts/claude/hooks/question-log-hook",
+            "timeout": 5
+          }
+        ],
+        "matcher": "(AskUserQuestion|mcp__.*__AskUserQuestion)"
+      }
+    ]
   }
 }
