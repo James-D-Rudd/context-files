@@ -3,4 +3,4 @@ gitignore: false
 
 auto-lint: true
 
-read: [~/.aider/CONVENTIONS.md]
+read: [~/CONVENTIONS.md]
